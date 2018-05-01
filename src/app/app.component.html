@@ -7,6 +7,7 @@
 </div>
 <h2>Here are the ingredients to make {{ name }}</h2>
 <ul>
-  <li *ngFor="let currentIngredient of ingredients">{{currentIngredient.description}}</li>
+  <li [class]="checkedColor(currentIngredient)" *ngFor="let currentIngredient of ingredients"><button (click)="checkOff(currentIngredient)">Check</button> {{currentIngredient.description}}
+  </li>
 </ul>
 <p>{{directions}}</p>
